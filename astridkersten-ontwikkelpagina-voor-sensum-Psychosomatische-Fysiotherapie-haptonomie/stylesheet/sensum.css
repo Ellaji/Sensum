@@ -1,0 +1,165 @@
+@font-face { 
+  font-family: 'logofont'; 
+  src: url('../font/Satisfy-Regular.ttf');
+}
+
+/* original logo color: #9dac93;*/
+
+html {
+  overflow-y: scroll;
+}
+
+body{
+	background: pink;
+	color: black;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'calibri';
+}
+
+div.page{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div.addborder{
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style:solid;
+  border-color: black;
+}
+
+div.stickontop{
+  position: sticky;
+  top: 0;
+}
+
+div.stickonbottom{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+}
+
+div.pad5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.pad12{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+div.padbottom{
+  padding-bottom: 150px;
+}
+
+.padright20{
+  padding-right: 20px;
+}
+
+img.photo{
+  border-radius: 25px;
+}
+
+div.greenbg{ background-color: rgb(137,155,125); }
+.sensumgreen{ color: rgb(137,155,125); }
+
+h1{ margin-left: 18px;} 
+h2{ margin-left: 22px;} 
+h3{ margin-left: 26px;}
+table,
+p { margin-left: 30px; }
+ul{ margin-left: 40px; margin-top: 0px;}
+h1, h2, h3, table, p, ul{margin-right: 30px;}
+
+h1{
+	font-size: 2.3em;
+  margin-bottom: 0px;
+}
+
+h2{
+	font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+p, li{
+	font-size: 1.0em;
+}
+
+p.lighttext{
+  color: rgb(99,99,99)
+}
+
+ol.linespaced li{padding-bottom: 12px;}
+ul.linespaced li{padding-bottom: 12px;}
+
+.bold{font-weight: bold;}
+
+table.borders, tr, td{
+  border-style: 1px;
+  border-style:solid;
+  border-color:black;
+  padding-right: 4px;
+  padding-right: 8px;
+}
+
+table.hidden, tr, td{
+  border-style: none;
+}
+
+table.trailer{
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.shorttable{
+  text-align: left;
+  padding-left: 4px;
+}
+
+table.shorttable th{
+  font-size: bold;
+  padding-right: 20px;
+  border-bottom: 1px solid;
+}
+
+table.shorttable td{
+  padding-top: 7px;
+  padding-right: 170px;
+  border-bottom: 0.25px solid;
+  border-color: rgb(150,150,150);
+}
+
+table.shorttable td:last-child{
+  padding-right: 20px;
+}
+
+table.cardtable th, td{
+  height: 12px;
+}
+
+table.cardtable th{
+  text-align: center;
+  border-bottom: 2px solid;
+}
+
+table.cardtable td{
+  text-align: center;
+  border-bottom: 0.25px solid;
+}
+
+a, a.visited, a.hover{
+  color: #333377;
+  text-decoration: none;
+}
+
+a.black{
+  color: black;
+}
