@@ -1,0 +1,17 @@
+.h-contained-text {
+  max-width: $max-text-width;
+  margin: 0 auto;
+  padding: 0 $side-spacing;
+}
+
+.h-align-right {
+  text-align: right;
+}
+
+.h-footer-spacing {
+  margin-bottom: $footer-height;
+
+  @include mq(M) {
+    margin-bottom: $footer-height-M;
+  }
+}

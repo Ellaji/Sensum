@@ -1,0 +1,26 @@
+{
+  "name": "sensum",
+  "version": "1.0.0",
+  "description": "Website Astrid Kersten Sensum Fysio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass-chokidar src/scss/ --include-path ./node_modules -o astridkersten-ontwikkelpagina-voor-sensum-Psychosomatische-Fysiotherapie-haptonomie/stylesheet/ --watch --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ellaji/Sensum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ellaji/Sensum/issues"
+  },
+  "homepage": "https://github.com/Ellaji/Sensum#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jslint": "^0.12.1",
+    "node-sass": "^4.14.1",
+    "node-sass-chokidar": "^1.5.0"
+  }
+}

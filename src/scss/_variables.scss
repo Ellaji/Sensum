@@ -1,0 +1,41 @@
+// colors
+$brand-color: #7c906f;
+$light-text-color: #fff;
+$dark-text-color: #3D4849;
+
+// spacings
+$base-spacing: 20px;
+$side-spacing: 30px;
+
+$spacings: (
+  0: 0,
+  1: $base-spacing,
+  2: ($base-spacing * 2),
+  3: ($base-spacing * 3),
+  4: ($base-spacing * 4),
+  5: ($base-spacing * 5),
+  6: ($base-spacing * 6)
+) !default;
+
+$half-spacing: ($base-spacing * .5);
+$quarter-spacing: ($base-spacing * .25);
+
+// layout 
+$max-bg-width: 1496px;
+$max-text-width: 1200px;
+
+$breakpoints: (
+  'XS':	375px,
+  'S':	576px,
+  'M':	768px,
+  'L':  1024px,
+  'XL':	1280px
+);
+
+$footer-height: 140px; // TODO
+$footer-height-M: 146px;
+
+// z-index map
+$z-index: (
+  background:               -1,
+);

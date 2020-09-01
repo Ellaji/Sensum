@@ -26,22 +26,45 @@
     <link rel="icon" type="image/svg+xml" href="image/Sensum_favicon.svg"/>
     <link rel="stylesheet" type="text/css" href="stylesheet/sensum.css">
     <link rel="stylesheet" type="text/css" href="stylesheet/purecssmenu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author"   lang="nl" content="Astrid Kersten">
     <meta name="keywords" lang="nl"
           content="Fysiotherapie, Psychosomatische fysiotherapie, Haptonomie, Astrid Kersten, Astrid, Kersten, Sensum, Sensumfysio, Psychosomatiek">
   </head>
   <body>
-    <div class="page"><?php include 'header.html'; ?></div>
-    <div class="greenbg stickontop">
-      <div class="page">
+    <div><?php include 'header.html'; ?></div>
+    <div class="stickontop">
+      <?php
+        echo "<button type='button' onclick='alerting()'>Testing Script</button>";
+      ?>
+      <script type="text/javascript">
+        function alerting(){
+          alert("dfdgfg");
+        }
+      </script>
+      <div>
         <?php include 'menu.html'; ?>
       </div>
     </div>
-    <div class="page padbottom"><?php include 'pages/'.$load_page.'.html'; ?></div>
-    <div class="greenbg pad5 stickonbottom">
-      <div class="page">
-        <?php include 'tail.html'; ?>
+    <div><?php include 'pages/'.$load_page.'.html'; ?></div>
+    <div class="h-footer-spacing"></div>
+    <div class="stickonbottom">
+      <div>
+        <?php include 'footer.html'; ?>
       </div>
     </div>
+    <script type="text/javascript" src="../src/js/menu.js"></script>
+    <script type="text/javascript">
+    function myFunction() {
+        console.log('test');
+        alert('test');
+        var x = document.getElementById("header");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+        } else {
+        x.style.display = "block";
+        }
+    }
+    </script>
   </body>
 </html>

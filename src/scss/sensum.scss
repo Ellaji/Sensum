@@ -1,0 +1,156 @@
+@import './normalize.scss';
+@import './normalize_custom.scss';
+@import './variables.scss';
+@import './mixins.scss';
+@import './typography';
+@import './helpers';
+
+
+@font-face {
+  font-family: "logofont";
+  src: url("../font/Satisfy-Regular.ttf");
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: white;
+  color: $dark-text-color;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "calibri";
+}
+
+.addborder {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+.stickontop {
+  position: sticky;
+  top: 0;
+}
+
+.stickonbottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* END old style */
+
+// components
+
+.header {
+  height: calc(100vh - #{$footer-height});
+  width: 100vw;
+  position: relative;
+
+  &__bg-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .6;
+    background-image: url("../image/Flower_1024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: map-get($z-index, 'background');
+  }
+
+  @include mq(M) {
+    height: calc(100vh - #{$footer-height-M});
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__logo {
+    height: auto;
+    margin-top: map-get($spacings, 3);
+    width: auto;
+    max-width: 100%;
+
+    @include mq(XS) {
+      height: 40vh;
+      margin-top: 10vh;
+    }
+
+    @include mq(L) {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.menu {
+  margin : 0 auto;
+  background-color: $brand-color;
+
+  &__hamburger {
+    @include mq(M) {
+      display: none;
+    }
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__list-item {
+    padding: $base-spacing 0;
+  }
+
+  &__list-item,
+  &__list-sub-item {
+    color: $light-text-color;
+    text-align: left;
+
+    &:hover {
+      color: $dark-text-color;
+    }
+  }
+}
+
+.section {
+  padding: map-get($spacings, 2) 0;
+
+  @include mq(M) {
+    padding: map-get($spacings, 3) 0;
+  }
+}
+
+.footer {
+  background-color: $brand-color;
+  width: 100vw;
+  color: $light-text-color;
+  stroke: $light-text-color;
+  padding: map-get($spacings, 1) 0;
+
+  &__lists {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+
+  &__list-item {
+    @include small-font;
+    line-height: 24px;
+  }
+
+  img {
+    padding-right: $quarter-spacing;
+  }
+}

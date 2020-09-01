@@ -1,0 +1,42 @@
+@mixin mq($media-query) {
+  @each $breakpoint-name, $breakpoint-px in $breakpoints {
+    @if $breakpoint-name == $media-query {
+      @media only screen and (min-width: $breakpoint-px) {
+        @content;
+      }
+    }
+    // max-width versions, 'desktop first'
+    @if $breakpoint-name + '-max' == $media-query {
+      @media only screen and (max-width: $breakpoint-px) {
+        @content;
+      }
+    }
+  }
+}
+
+// Typography
+
+@mixin small-font {
+  font-size: 12px;
+
+  @include mq(XS) {
+    font-size: 14px;
+  }
+
+  @include mq(S) {
+    font-size: 16px;
+  }
+
+  @include mq(M) {
+    font-size: 18px;
+  }
+}
+
+@mixin small-header {
+  font-size: 18px;
+  padding-bottom: $half-spacing;
+
+  @include mq(M) {
+    font-size: 20px;
+  }
+}
