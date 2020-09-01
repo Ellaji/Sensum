@@ -25,7 +25,6 @@
     <title>Sensumfysio.nl</title>
     <link rel="icon" type="image/svg+xml" href="image/Sensum_favicon.svg"/>
     <link rel="stylesheet" type="text/css" href="stylesheet/sensum.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet/purecssmenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author"   lang="nl" content="Astrid Kersten">
     <meta name="keywords" lang="nl"
@@ -33,13 +32,17 @@
   </head>
   <body>
     <div><?php include 'header.html'; ?></div>
-    <div class="stickontop">
+    <div id="menu__wrapper" class="stickontop menu__wrapper">
       <?php
-        echo "<div class='menu__hamburger' id='hamburger' onclick='toggleHamburger()'>=</div>";
+        echo "<div class='menu__mobile-button' id='menu__mobile-button' onclick='toggleMenu()'>Menu</div>";
       ?>
       <div><?php include 'menu.html'; ?></div>
     </div>
-    <div><?php include 'pages/'.$load_page.'.html'; ?></div>
+    <div class="section">
+      <div class="h-contained-text">
+        <div><?php include 'pages/'.$load_page.'.html'; ?></div>
+      </div>
+    </div>
     <div class="h-footer-spacing"></div>
     <div class="stickonbottom">
       <div>

@@ -439,6 +439,106 @@ li {
     .h-footer-spacing {
       margin-bottom: 146px; } }
 
+.header:not(.header--homepage) {
+  width: 100vw; }
+  .header:not(.header--homepage) .header__text {
+    text-align: center; }
+  .header:not(.header--homepage) .header__logo {
+    height: 100px;
+    margin: 20px 0; }
+    @media only screen and (min-width: 768px) {
+      .header:not(.header--homepage) .header__logo {
+        height: 150px;
+        margin: 40px 0; } }
+  .header:not(.header--homepage) .header__bg-image {
+    display: none; }
+
+.header--homepage {
+  height: calc(100vh - 140px);
+  width: 100vw;
+  position: relative; }
+  @media only screen and (min-width: 768px) {
+    .header--homepage {
+      height: calc(100vh - 146px); } }
+  .header--homepage .header__text {
+    text-align: left; }
+  .header--homepage .header__logo {
+    height: auto;
+    margin-top: 60px;
+    width: auto;
+    max-width: 100%; }
+    @media only screen and (min-width: 375px) {
+      .header--homepage .header__logo {
+        height: 40vh;
+        margin-top: 10vh; } }
+    @media only screen and (min-width: 1024px) {
+      .header--homepage .header__logo {
+        margin-top: 20vh; } }
+  .header--homepage .header__bg-image {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .6;
+    background-image: url("../image/Flower_1024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: -1; }
+
+.menu {
+  margin: 0 auto;
+  background-color: #fff;
+  height: 350px;
+  transition: height 1s; }
+  @media only screen and (min-width: 768px) {
+    .menu {
+      height: auto; } }
+  .menu--hide {
+    height: 0;
+    overflow: hidden; }
+    @media only screen and (min-width: 768px) {
+      .menu--hide {
+        height: auto; } }
+  .menu__mobile-button {
+    color: #7c906f;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px double #7c906f;
+    background-color: #fff; }
+    @media only screen and (min-width: 768px) {
+      .menu__mobile-button {
+        display: none; } }
+  .menu__list {
+    text-align: center;
+    padding-top: 20px; }
+    @media only screen and (min-width: 768px) {
+      .menu__list {
+        padding-top: 0;
+        border-bottom: 4px double #7c906f; } }
+  .menu__list-item {
+    padding: 20px 0; }
+    @media only screen and (min-width: 768px) {
+      .menu__list-item {
+        display: inline-block; }
+        .menu__list-item:not(:last-child) {
+          padding-right: 30px; }
+        .menu__list-item:hover .menu__sub-list {
+          display: inherit; } }
+  .menu__list-item, .menu__list-sub-item {
+    color: #7c906f; }
+    .menu__list-item:hover, .menu__list-sub-item:hover {
+      color: #3D4849; }
+  .menu__sub-list {
+    display: none;
+    position: absolute;
+    top: 40px;
+    /* the height of the main nav */
+    left: 0;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+
 @font-face {
   font-family: "logofont";
   src: url("../font/Satisfy-Regular.ttf"); }
@@ -472,52 +572,6 @@ body {
   width: 100%; }
 
 /* END old style */
-.header {
-  height: calc(100vh - 140px);
-  width: 100vw;
-  position: relative; }
-  @media only screen and (min-width: 768px) {
-    .header {
-      height: calc(100vh - 146px); } }
-  .header__bg-image {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: .6;
-    background-image: url("../image/Flower_1024.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    z-index: -1; }
-  .header__logo {
-    height: auto;
-    margin-top: 60px;
-    width: auto;
-    max-width: 100%; }
-    @media only screen and (min-width: 375px) {
-      .header__logo {
-        height: 40vh;
-        margin-top: 10vh; } }
-    @media only screen and (min-width: 1024px) {
-      .header__logo {
-        margin-top: 20vh; } }
-
-.menu {
-  margin: 0 auto;
-  background-color: #7c906f; }
-  @media only screen and (min-width: 768px) {
-    .menu__hamburger {
-      display: none; } }
-  .menu__list {
-    text-align: center; }
-  .menu__list-item {
-    padding: 20px 0; }
-  .menu__list-item, .menu__list-sub-item {
-    color: #fff;
-    text-align: left; }
-    .menu__list-item:hover, .menu__list-sub-item:hover {
-      color: #3D4849; }
-
 .section {
   padding: 40px 0; }
   @media only screen and (min-width: 768px) {

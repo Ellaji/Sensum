@@ -4,6 +4,8 @@
 @import './mixins.scss';
 @import './typography';
 @import './helpers';
+@import './header';
+@import './menu';
 
 
 @font-face {
@@ -48,73 +50,6 @@ body {
 
 // components
 
-.header {
-  height: calc(100vh - #{$footer-height});
-  width: 100vw;
-  position: relative;
-
-  @include mq(M) {
-    height: calc(100vh - #{$footer-height-M});
-  }
-
-  &__bg-image {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: .6;
-    background-image: url("../image/Flower_1024.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    z-index: map-get($z-index, 'background');
-  }
-
-  &__logo {
-    height: auto;
-    margin-top: map-get($spacings, 3);
-    width: auto;
-    max-width: 100%;
-
-    @include mq(XS) {
-      height: 40vh;
-      margin-top: 10vh;
-    }
-
-    @include mq(L) {
-      margin-top: 20vh;
-    }
-  }
-}
-
-.menu {
-  margin : 0 auto;
-  background-color: $brand-color;
-
-  &__hamburger {
-    @include mq(M) {
-      display: none;
-    }
-  }
-
-  &__list {
-    text-align: center;
-  }
-
-  &__list-item {
-    padding: $base-spacing 0;
-  }
-
-  &__list-item,
-  &__list-sub-item {
-    color: $light-text-color;
-    text-align: left;
-
-    &:hover {
-      color: $dark-text-color;
-    }
-  }
-}
-
 .section {
   padding: map-get($spacings, 2) 0;
 
@@ -124,10 +59,10 @@ body {
 }
 
 .footer {
-  background-color: $brand-color;
+  background-color: $color-brand-primary;
   width: 100vw;
-  color: $light-text-color;
-  stroke: $light-text-color;
+  color: $color-brand-contrast;
+  stroke: $color-brand-contrast;
   padding: map-get($spacings, 1) 0;
 
   &__lists {

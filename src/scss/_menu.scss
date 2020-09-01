@@ -1,0 +1,77 @@
+
+.menu {
+  margin : 0 auto;
+  background-color: $color-brand-contrast;
+  height: 350px;
+  transition: height 1s;
+
+  @include mq(M) {
+    height: auto;
+  }
+
+  &--hide {
+    height: 0;
+    overflow: hidden;
+
+    @include mq(M) {
+      height: auto;
+    }
+  }
+
+  &__mobile-button {
+    color: $color-brand-primary;
+    text-align: center;
+    padding: $base-spacing;
+    border-bottom: 4px double $color-brand-primary;
+    background-color: $color-brand-contrast;
+
+    @include mq(M) {
+      display: none;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    padding-top: $base-spacing;
+
+    @include mq(M) {
+      padding-top: 0;
+      border-bottom: 4px double $color-brand-primary;
+    }
+  }
+
+  &__list-item {
+    padding: $base-spacing 0;
+
+    @include mq(M) {
+      display: inline-block;
+
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
+
+      &:hover .menu__sub-list {
+        display: inherit;
+      }
+    }
+  }
+
+  &__list-item,
+  &__list-sub-item {
+    color: $color-brand-primary;
+
+    &:hover {
+      color: $dark-text-color;
+    }
+  }
+
+  &__sub-list {
+    display: none;
+    position: absolute;
+    top: 40px; /* the height of the main nav */
+    left: 0;
+    padding-left: 30px;
+    padding-bottom: $base-spacing;
+    padding-top: $base-spacing;
+  }
+}

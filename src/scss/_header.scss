@@ -1,0 +1,68 @@
+.header:not(.header--homepage) {
+  width: 100vw;
+
+  .header {
+    &__text {
+      text-align: center;
+    }
+
+    &__logo {
+      height: 100px;
+      margin: map-get($spacings, 1) 0;
+
+      @include mq(M) {
+        height: 150px;
+        margin: map-get($spacings, 2) 0;
+      }
+    }
+
+    &__bg-image {
+      display: none;
+    }
+  }
+}
+
+.header--homepage {
+  height: calc(100vh - #{$footer-height});
+  width: 100vw;
+  position: relative;
+
+  @include mq(M) {
+    height: calc(100vh - #{$footer-height-M});
+  }
+
+  .header {
+    &__text {
+      text-align: left;
+    }
+
+    &__logo {
+      height: auto;
+      margin-top: map-get($spacings, 3);
+      width: auto;
+      max-width: 100%;
+  
+      @include mq(XS) {
+        height: 40vh;
+        margin-top: 10vh;
+      }
+  
+      @include mq(L) {
+        margin-top: 20vh;
+      }
+    }
+
+    &__bg-image {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: .6;
+      background-image: url("../image/Flower_1024.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      z-index: map-get($z-index, 'background');
+    }
+  }
+}

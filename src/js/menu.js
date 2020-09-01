@@ -59,6 +59,30 @@
     }
 }*/
 
-function toggleHamburger() {
-    alert("toggle");
+function changeHeader() {
+    var querystring = window.location.search;
+    var header = document.getElementById('header');
+    var logo = document.getElementById('header__logo');
+
+    if (querystring === '?page=0' || querystring === '') {
+        logo.src = "image/sensum_logo_title.svg";
+        if (header.classList.contains('header--homepage')) {
+            return;
+        } else {
+            header.classList.add('header--homepage');
+        }
+    } else {
+        logo.src = "image/sensum_logo.svg";
+        if (header.classList.contains('header--homepage')) {
+            header.classList.remove('header--homepage');
+        } else {
+            return;
+        }
+    }
 }
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('menu--hide');
+}
+
+changeHeader();
