@@ -53,6 +53,10 @@ body {
   width: 100vw;
   position: relative;
 
+  @include mq(M) {
+    height: calc(100vh - #{$footer-height-M});
+  }
+
   &__bg-image {
     position: absolute;
     height: 100%;
@@ -63,14 +67,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     z-index: map-get($z-index, 'background');
-  }
-
-  @include mq(M) {
-    height: calc(100vh - #{$footer-height-M});
-  }
-
-  &--hidden {
-    display: none;
   }
 
   &__logo {

@@ -476,6 +476,9 @@ body {
   height: calc(100vh - 140px);
   width: 100vw;
   position: relative; }
+  @media only screen and (min-width: 768px) {
+    .header {
+      height: calc(100vh - 146px); } }
   .header__bg-image {
     position: absolute;
     height: 100%;
@@ -486,11 +489,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     z-index: -1; }
-  @media only screen and (min-width: 768px) {
-    .header {
-      height: calc(100vh - 146px); } }
-  .header--hidden {
-    display: none; }
   .header__logo {
     height: auto;
     margin-top: 60px;

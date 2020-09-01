@@ -15,7 +15,7 @@
     case 34:  $load_page = '034_privacy'; break;
     case 35:  $load_page = '035_kwaliteit'; break;
     case 40:  $load_page = '040_overmij'; break;
-    case 50:  $load_page = '050_contact'; break;
+    case 'contact':  $load_page = 'contact'; break;
     default: $load_page = '000_home';
   }
   
@@ -35,16 +35,9 @@
     <div><?php include 'header.html'; ?></div>
     <div class="stickontop">
       <?php
-        echo "<button type='button' onclick='alerting()'>Testing Script</button>";
+        echo "<div class='menu__hamburger' id='hamburger' onclick='toggleHamburger()'>=</div>";
       ?>
-      <script type="text/javascript">
-        function alerting(){
-          alert("dfdgfg");
-        }
-      </script>
-      <div>
-        <?php include 'menu.html'; ?>
-      </div>
+      <div><?php include 'menu.html'; ?></div>
     </div>
     <div><?php include 'pages/'.$load_page.'.html'; ?></div>
     <div class="h-footer-spacing"></div>
@@ -54,17 +47,5 @@
       </div>
     </div>
     <script type="text/javascript" src="../src/js/menu.js"></script>
-    <script type="text/javascript">
-    function myFunction() {
-        console.log('test');
-        alert('test');
-        var x = document.getElementById("header");
-        if (x.style.display === "block") {
-        x.style.display = "none";
-        } else {
-        x.style.display = "block";
-        }
-    }
-    </script>
   </body>
 </html>
