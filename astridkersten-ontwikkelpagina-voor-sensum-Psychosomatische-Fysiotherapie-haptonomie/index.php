@@ -38,10 +38,8 @@
       ?>
       <div><?php include 'menu.html'; ?></div>
     </div>
-    <div class="section">
-      <div class="h-contained-text">
-        <div><?php include 'pages/'.$load_page.'.html'; ?></div>
-      </div>
+    <div class="h-contained-text">
+      <div class="page-inner"><?php include 'pages/'.$load_page.'.html'; ?></div>
     </div>
     <div class="h-footer-spacing"></div>
     <div class="stickonbottom">

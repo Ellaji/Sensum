@@ -34,11 +34,13 @@ $breakpoints: (
   'XL':	1280px
 );
 
-$footer-height: 140px; // TODO
-$footer-height-M: 146px;
+$footer-height: 140px;
+$footer-height-M: 150px;
 
 // z-index map
 $z-index: (
   background:               -1,
+  normal-menu:               1,
+  footer:                    2,
   mobile-menu:              10,
 );

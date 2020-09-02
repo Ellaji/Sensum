@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: white;
+  background: $color-brand-contrast;
   color: $dark-text-color;
   font-size: 16px;
   margin: 0px;
@@ -26,13 +26,18 @@ body {
   font-family: "calibri";
 }
 
-.addborder {
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-style: solid;
-  border-color: black;
+h1 {
+  padding-bottom: $half-spacing;
+  font-family: "Satisfy regular";
+  color: $color-brand-primary;
+  text-shadow: 2px 2px $color-brand-contrast;
+  line-height: 1.3em;
+}
+
+h2, 
+h3 {
+  padding-top: $half-spacing;
+  color: $color-brand-primary;
 }
 
 .stickontop {
@@ -44,26 +49,40 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: map-get($z-index, 'footer');
 }
 
-/* END old style */
-
-// components
+.page-inner {
+  position: relative;
+}
 
 .section {
-  padding: map-get($spacings, 2) $base-spacing;
+  padding: map-get($spacings, 3) $base-spacing;
+  line-height: 1.3em;
 
   @include mq(M) {
-    padding: map-get($spacings, 3) $base-spacing;
+    padding: map-get($spacings, 3) $base-spacing map-get($spacings, 3);
   }
+}
+
+.portrait-photo {
+  width: 250px; 
+  height: auto;
+  clip-path: circle(125px at center);
 }
 
 .footer {
   background-color: $color-brand-primary;
   width: 100%;
+  box-sizing: border-box;
   color: $color-brand-contrast;
   stroke: $color-brand-contrast;
   padding: map-get($spacings, 1) 0;
+  height: $footer-height;
+
+  @include mq(M) {
+    height: $footer-height-M;
+  }
 
   &__lists {
     width: 100%;
