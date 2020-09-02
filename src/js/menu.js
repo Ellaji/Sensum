@@ -65,7 +65,7 @@ function changeHeader() {
     var logo = document.getElementById('header__logo');
 
     if (querystring === '?page=0' || querystring === '') {
-        logo.src = "image/sensum_logo_title.svg";
+        logo.src = 'image/sensum_logo_title.svg';
         if (header.classList.contains('header--homepage')) {
             return;
         } else {
@@ -80,9 +80,25 @@ function changeHeader() {
         }
     }
 }
+
 function toggleMenu() {
     var menu = document.getElementById('menu');
     menu.classList.toggle('menu--hide');
+
+    var menuWrapper = document.getElementById('menu__wrapper');
+    menuWrapper.classList.toggle('menu__wrapper--show-mobile-menu');
+
+    var menuMobileButton = document.getElementById('menu__mobile-button');
+    if (menuMobileButton.innerHTML === 'Menu') {
+        menuMobileButton.innerHTML = 'Sluit Menu';
+    } else {
+        menuMobileButton.innerHTML = 'Menu';
+    }
+}
+
+function toggleSubMenu() {
+    var menu = document.getElementById('menu__list-item--info');
+    menu.classList.toggle('menu__list-item--show-submenu');
 }
 
 changeHeader();

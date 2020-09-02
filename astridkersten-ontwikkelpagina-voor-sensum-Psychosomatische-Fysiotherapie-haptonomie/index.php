@@ -32,7 +32,7 @@
   </head>
   <body>
     <div><?php include 'header.html'; ?></div>
-    <div id="menu__wrapper" class="stickontop menu__wrapper">
+    <div id="menu__wrapper" class="stickontop menu__wrapper h-contained-text">
       <?php
         echo "<div class='menu__mobile-button' id='menu__mobile-button' onclick='toggleMenu()'>Menu</div>";
       ?>

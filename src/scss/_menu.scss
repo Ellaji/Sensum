@@ -2,11 +2,22 @@
 .menu {
   margin : 0 auto;
   background-color: $color-brand-contrast;
-  height: 350px;
-  transition: height 1s;
 
-  @include mq(M) {
-    height: auto;
+  &__wrapper--show-mobile-menu.stickontop {
+    @include mq(M-max) {
+      position: fixed;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: map-get($z-index, 'mobile-menu');
+      background-color: $color-brand-contrast;
+      overflow-y: scroll;
+    }
+  }
+
+  &__wrapper--show-mobile-menu .menu__mobile-button {
+    font-style: italic;
   }
 
   &--hide {
@@ -15,10 +26,13 @@
 
     @include mq(M) {
       height: auto;
+      overflow: visible;
     }
   }
 
   &__mobile-button {
+    @include small-header;
+    cursor: pointer;
     color: $color-brand-primary;
     text-align: center;
     padding: $base-spacing;
@@ -41,37 +55,82 @@
   }
 
   &__list-item {
-    padding: $base-spacing 0;
-
-    @include mq(M) {
-      display: inline-block;
-
-      &:not(:last-child) {
-        padding-right: 30px;
-      }
-
-      &:hover .menu__sub-list {
-        display: inherit;
-      }
-    }
-  }
-
-  &__list-item,
-  &__list-sub-item {
+    position: relative;
     color: $color-brand-primary;
+    width: auto;
+    max-width: fit-content;
+    margin: 0 auto;
 
     &:hover {
       color: $dark-text-color;
     }
+
+    @include mq(M-max) {
+      padding: $half-spacing 0;
+      border-bottom: 4px double;
+      border-color: transparent;
+
+      &--show-submenu {
+        border-color: $color-brand-primary;
+        transition: border-color 1s ease-in-out;
+
+        .menu__sub-list {
+          @include show-sub-menu;
+        }
+      }
+    }
+
+    @include mq(M) {
+      display: inline-block;
+      padding: $base-spacing 0;
+
+      &:not(:last-child) {
+        padding-right: $base-spacing;
+      }
+
+      &:hover .menu__sub-list {
+        @include show-sub-menu;
+      }
+    }
+  }
+
+  &__list-sub-item {
+    color: $color-brand-primary;
+    line-height: 30px;
+
+    &:hover {
+      color: $dark-text-color;
+    }
+
+    @include mq(M-max) {
+      &:first-child {
+        padding-top: $base-spacing;
+      }
+    }
+
+    @include mq(M) {
+      &:last-child {
+        padding-bottom: $base-spacing;
+      }
+    }
   }
 
   &__sub-list {
-    display: none;
-    position: absolute;
-    top: 40px; /* the height of the main nav */
-    left: 0;
-    padding-left: 30px;
-    padding-bottom: $base-spacing;
-    padding-top: $base-spacing;
+    max-height: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: $color-brand-contrast;
+    transition: max-height .8s cubic-bezier(1,0,.5,.5);
+
+    @include mq(M) {
+      position: absolute;
+      top: 56px; // font-size 16px + 2 * 20px base-spacing
+      left: - map-get($spacings, 2);
+      right: - map-get($spacings, 2);
+      margin: 0 auto;
+      border-left: 1px solid $color-brand-primary;
+      border-right: 1px solid $color-brand-primary;
+      border-bottom: 4px double $color-brand-primary;
+    }
   }
 }

@@ -51,16 +51,16 @@ body {
 // components
 
 .section {
-  padding: map-get($spacings, 2) 0;
+  padding: map-get($spacings, 2) $base-spacing;
 
   @include mq(M) {
-    padding: map-get($spacings, 3) 0;
+    padding: map-get($spacings, 3) $base-spacing;
   }
 }
 
 .footer {
   background-color: $color-brand-primary;
-  width: 100vw;
+  width: 100%;
   color: $color-brand-contrast;
   stroke: $color-brand-contrast;
   padding: map-get($spacings, 1) 0;

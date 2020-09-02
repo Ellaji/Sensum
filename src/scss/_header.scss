@@ -1,5 +1,5 @@
 .header:not(.header--homepage) {
-  width: 100vw;
+  width: 100%;
 
   .header {
     &__text {
@@ -24,7 +24,7 @@
 
 .header--homepage {
   height: calc(100vh - #{$footer-height});
-  width: 100vw;
+  width: 100%;
   position: relative;
 
   @include mq(M) {

@@ -6,6 +6,8 @@ $dark-text-color: #3D4849;
 // spacings
 $base-spacing: 20px;
 $side-spacing: 30px;
+$side-spacing--M: 40px;
+$side-spacing--L: 60px;
 
 $spacings: (
   0: 0,
@@ -38,4 +40,5 @@ $footer-height-M: 146px;
 // z-index map
 $z-index: (
   background:               -1,
+  mobile-menu:              10,
 );
