@@ -24,6 +24,7 @@
   <head>
     <title>Sensumfysio.nl</title>
     <link rel="icon" type="image/svg+xml" href="image/Sensum_favicon.svg"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
     <link rel="stylesheet" type="text/css" href="stylesheet/sensum.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author"   lang="nl" content="Astrid Kersten">

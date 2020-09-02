@@ -99,6 +99,7 @@
         border-left: 1px solid $color-brand-primary;
         border-right: 1px solid $color-brand-primary;
         border-bottom: 4px double $color-brand-primary;
+        z-index: map-get($z-index, 'normal-menu');
       }
     }
   }
