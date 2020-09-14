@@ -6,6 +6,10 @@ ul {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
 a,
@@ -13,8 +17,4 @@ a.visited,
 a.hover {
   text-decoration: none;
   color: inherit;
-}
-
-li {
-  list-style: none;
 }

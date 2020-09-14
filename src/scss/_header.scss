@@ -23,13 +23,9 @@
 }
 
 .header--homepage {
-  height: calc(100vh - #{$footer-height});
+  height: calc(100vh - #{$footer-height} - #{$menu-height});
   width: 100%;
   position: relative;
-
-  @include mq(M) {
-    height: calc(100vh - #{$footer-height-M});
-  }
 
   .header {
     &__text {
@@ -44,11 +40,7 @@
   
       @include mq(XS) {
         height: 40vh;
-        margin-top: 10vh;
-      }
-  
-      @include mq(L) {
-        margin-top: 20vh;
+        margin-top: 8vh;
       }
     }
 
@@ -57,7 +49,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      opacity: .6;
+      opacity: .5;
       background-image: url("../image/flower_1024x300.jpg");
       background-size: cover;
       background-repeat: no-repeat;

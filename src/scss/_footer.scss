@@ -1,0 +1,40 @@
+.footer {
+  background-color: $color-brand-primary;
+  width: 100%;
+  box-sizing: border-box;
+  color: $color-brand-contrast;
+  stroke: $color-brand-contrast;
+  padding: map-get($spacings, 1) 0;
+  height: $footer-height;
+
+  &__lists {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: text-top;
+
+    &--special {
+      cursor: pointer;
+      font-style: italic;
+      opacity: .6;
+      transition: opacity .5s ease-in-out;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+
+  &__list-item {
+    @include small-font;
+    line-height: 24px;
+  }
+
+  img {
+    padding-right: $quarter-spacing;
+  }
+}

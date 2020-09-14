@@ -6,6 +6,7 @@
 @import './helpers';
 @import './header';
 @import './menu';
+@import './footer';
 
 
 @font-face {
@@ -38,6 +39,14 @@ h2,
 h3 {
   padding-top: $half-spacing;
   color: $color-brand-primary;
+}
+
+td:not(:last-child) {
+  padding-right: $base-spacing;
+}
+
+th {
+  padding-bottom: $base-spacing;
 }
 
 .stickontop {
@@ -82,45 +91,15 @@ h3 {
   }
 
   &__part2 {
-    text-align: right;
+    text-align: center;
+
+    @include mq(M) {
+      text-align: right;
+    }
   }
 }
 
 .portrait-photo {
   width: 256px; 
   height: auto;
-}
-
-.footer {
-  background-color: $color-brand-primary;
-  width: 100%;
-  box-sizing: border-box;
-  color: $color-brand-contrast;
-  stroke: $color-brand-contrast;
-  padding: map-get($spacings, 1) 0;
-  height: $footer-height;
-
-  @include mq(M) {
-    height: $footer-height-M;
-  }
-
-  &__lists {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__list {
-    display: inline-block;
-    vertical-align: text-top;
-  }
-
-  &__list-item {
-    @include small-font;
-    line-height: 24px;
-  }
-
-  img {
-    padding-right: $quarter-spacing;
-  }
 }
