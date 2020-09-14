@@ -447,9 +447,6 @@ a.hover {
 .h-padding-right {
   padding-right: 20px; }
 
-.h-padding-top {
-  padding-top: 20px; }
-
 .h-styled-list li {
   position: relative;
   padding-left: 20px; }
@@ -645,13 +642,6 @@ a.hover {
   .footer__list {
     display: inline-block;
     vertical-align: text-top; }
-    .footer__list--special {
-      cursor: pointer;
-      font-style: italic;
-      opacity: .6;
-      transition: opacity .5s ease-in-out; }
-      .footer__list--special:hover {
-        opacity: .9; }
   .footer__list-item {
     font-size: 12px;
     line-height: 24px; }
@@ -736,6 +726,15 @@ th {
   @media only screen and (min-width: 768px) {
     .contact__part2 {
       text-align: right; } }
+
+.text-special {
+  font-style: italic;
+  color: #7c906f;
+  cursor: pointer;
+  font-style: italic;
+  transition: color .5s ease-in-out; }
+  .text-special:hover {
+    color: #3D4849; }
 
 .portrait-photo {
   width: 256px;

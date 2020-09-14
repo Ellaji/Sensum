@@ -16,17 +16,6 @@
   &__list {
     display: inline-block;
     vertical-align: text-top;
-
-    &--special {
-      cursor: pointer;
-      font-style: italic;
-      opacity: .6;
-      transition: opacity .5s ease-in-out;
-
-      &:hover {
-        opacity: .9;
-      }
-    }
   }
 
   &__list-item {

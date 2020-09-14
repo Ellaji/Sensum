@@ -99,6 +99,18 @@ th {
   }
 }
 
+.text-special {
+  font-style: italic;
+  color: $color-brand-primary;
+  cursor: pointer;
+  font-style: italic;
+  transition: color .5s ease-in-out;
+
+  &:hover {
+    color: $dark-text-color;
+  }
+}
+
 .portrait-photo {
   width: 256px; 
   height: auto;
