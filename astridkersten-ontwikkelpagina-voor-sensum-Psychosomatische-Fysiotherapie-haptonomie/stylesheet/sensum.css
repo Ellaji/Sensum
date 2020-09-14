@@ -442,7 +442,7 @@ a.hover {
   text-align: center; }
 
 .h-footer-spacing {
-  margin-bottom: 180px; }
+  margin-bottom: 140px; }
 
 .h-padding-right {
   padding-right: 20px; }
@@ -493,7 +493,7 @@ a.hover {
     display: none; }
 
 .header--homepage {
-  height: calc(100vh - 180px - 56px);
+  height: calc(100vh - 140px - 56px);
   width: 100%;
   position: relative; }
   .header--homepage .header__text {
@@ -634,7 +634,7 @@ a.hover {
   color: #fff;
   stroke: #fff;
   padding: 20px 0;
-  height: 180px; }
+  height: 140px; }
   .footer__lists {
     width: 100%;
     display: flex;
