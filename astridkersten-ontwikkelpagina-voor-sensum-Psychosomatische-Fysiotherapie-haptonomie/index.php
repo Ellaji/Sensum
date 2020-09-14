@@ -15,7 +15,7 @@
     case 34:  $load_page = '034_privacy'; break;
     case 35:  $load_page = '035_kwaliteit'; break;
     case 40:  $load_page = '040_overmij'; break;
-    case 'contact':  $load_page = 'contact'; break;
+    case 50:  $load_page = '050_contact'; break;
     default: $load_page = '000_home';
   }
   
