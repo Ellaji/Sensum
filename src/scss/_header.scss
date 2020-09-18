@@ -23,9 +23,13 @@
 }
 
 .header--homepage {
-  height: calc(100vh - #{$footer-height} - #{$menu-height});
+  height: calc(100vh - #{$footer-height} - 2 * #{$menu-height});
   width: 100%;
   position: relative;
+
+  @include mq(M) {
+    height: calc(100vh - #{$footer-height} - #{$menu-height});
+  }
 
   .header {
     &__text {

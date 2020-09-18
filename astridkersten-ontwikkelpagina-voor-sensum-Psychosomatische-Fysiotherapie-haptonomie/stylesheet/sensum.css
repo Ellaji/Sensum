@@ -493,9 +493,12 @@ a.hover {
     display: none; }
 
 .header--homepage {
-  height: calc(100vh - 140px - 56px);
+  height: calc(100vh - 140px - 2 * 56px);
   width: 100%;
   position: relative; }
+  @media only screen and (min-width: 768px) {
+    .header--homepage {
+      height: calc(100vh - 140px - 56px); } }
   .header--homepage .header__text {
     text-align: left; }
   .header--homepage .header__logo {
